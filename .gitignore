@@ -2,13 +2,13 @@
 #
 # Get latest from https://github.com/github/gitignore/blob/master/Unity.gitignore
 #
-KaitlynKirby Rapid Prototyping/[Ll]ibrary/
-KaitlynKirby Rapid Prototyping/[Tt]emp/
-KaitlynKirby Rapid Prototyping/[Oo]bj/
-KaitlynKirby Rapid Prototyping/[Bb]uild/
-KaitlynKirby Rapid Prototyping/[Bb]uilds/
-KaitlynKirby Rapid Prototyping/[Ll]ogs/
-KaitlynKirby Rapid Prototyping/[Mm]emoryCaptures/
+Kaitlyn Kirby Rapid Prototyping/[Ll]ibrary/
+Kaitlyn Kirby Rapid Prototyping/[Tt]emp/
+Kaitlyn Kirby Rapid Prototyping/[Oo]bj/
+Kaitlyn Kirby Rapid Prototyping/[Bb]uild/
+Kaitlyn Kirby Rapid Prototyping/[Bb]uilds/
+Kaitlyn Kirby Rapid Prototyping/[Ll]ogs/
+Kaitlyn Kirby Rapid Prototyping/[Mm]emoryCaptures/
 
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 !/[Aa]ssets/**/*.meta
