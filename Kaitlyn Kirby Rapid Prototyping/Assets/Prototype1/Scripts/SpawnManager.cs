@@ -12,10 +12,13 @@ namespace Prototype1
         private float startDelay = 2f;
         private float repeatRate = 2f;
 
+        private Prototype1.PlayerController playerControllerScript;
+
         // Start is called before the first frame update
         void Start()
         {
-            InvokeRepeating("SpawnObstacle", startDelay, repeatRate); 
+            InvokeRepeating("SpawnObstacle", startDelay, repeatRate);
+            playerControllerScript = GameObject.Find("Player").GetComponent<Prototype1.PlayerController>();
         }
 
         // Update is called once per frame
@@ -26,7 +29,10 @@ namespace Prototype1
 
         void SpawnObstacle()
         {
-            Instantiate(obstaclePrefab, spawnPos, obstaclePrefab.transform.rotation);
+            if(playerControllerScript.gameOver == false)
+            {
+                Instantiate(obstaclePrefab, spawnPos, obstaclePrefab.transform.rotation);
+            }
         }
     }
 }
