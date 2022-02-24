@@ -13,6 +13,9 @@ namespace Prototype1
         public bool isOnGround = true;
         public bool gameOver = false;
 
+        public bool doubleJumpUsed = false;
+        public float doubleJumpForce;
+
         private Animator playerAnim;
 
         public ParticleSystem explosionParticle;
@@ -41,6 +44,15 @@ namespace Prototype1
                 isOnGround = false;
                 playerAnim.SetTrigger("Jump_trig");
                 dirtParticle.Stop();
+                playerAudio.PlayOneShot(jumpSound, 1f);
+
+                doubleJumpUsed = false;
+            }
+            else if (Input.GetKeyDown(KeyCode.Space) && !isOnGround && !doubleJumpUsed)
+            {
+                doubleJumpUsed = true;
+                playerRB.AddForce(Vector3.up * doubleJumpForce, ForceMode.Impulse);
+                playerAnim.Play("Running_Jump", 3, 0f);
                 playerAudio.PlayOneShot(jumpSound, 1f);
             }
         }
