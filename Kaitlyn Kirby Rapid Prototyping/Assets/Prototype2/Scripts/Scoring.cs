@@ -6,12 +6,11 @@ using TMPro;
 
 namespace Prototype2
 {
-    public class Scoring : JMC
+    public class Scoring : MonoBehaviour
     {
-        TextMeshProUGUI scoreDifference;
+        public TextMeshProUGUI scoreText;
 
-        float lastRoundScore = 50;
-        float thisRoundScore = 88;
+        public Transform player;
 
         // Start is called before the first frame update
         void Start()
@@ -22,12 +21,8 @@ namespace Prototype2
         // Update is called once per frame
         void Update()
         {
-
+            scoreText.text = player.position.z.ToString("0");
         }
 
-        void GetScoreDifference()
-        {
-            scoreDifference.text = "Youn change is: " + PercentageChange(lastRoundScore, thisRoundScore);
-        }
     }
 }
