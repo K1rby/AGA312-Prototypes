@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Prototype2;
 namespace Prototype2
 {
     public class PlayerMovement : MonoBehaviour
@@ -27,6 +28,11 @@ namespace Prototype2
             if (Input.GetKey(KeyCode.A))
             {
                 playerRB.AddForce(-65 * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
+            }
+
+            if(playerRB.position.y < -1f)
+            {
+                FindObjectOfType<GameManager>().GameOver();
             }
         }
     }

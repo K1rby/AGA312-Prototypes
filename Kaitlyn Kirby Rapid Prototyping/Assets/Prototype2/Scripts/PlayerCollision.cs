@@ -25,6 +25,7 @@ namespace Prototype2
             if(collision.collider.tag == "Obstacle")
             {
                 playerMovement.enabled = false;
+                FindObjectOfType<GameManager>().GameOver();
             }
         }
     }

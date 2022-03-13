@@ -1,17 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DanielDangToolkit;
+using UnityEngine.SceneManagement;
 
 namespace Prototype2
 {
-    public class GameManager : JMC
+    public class GameManager : MonoBehaviour
     {
-        public int score;
-        public int lives;
+        bool gameEnded = false;
+        public float restartDelay = 1f;
 
         public void GameOver()
         {
-            //Execute game over logic
+            if (gameEnded == false)
+            {
+                gameEnded = true;
+                Invoke("Restart", restartDelay);
+            }
+        }
+
+        public void Restart()
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name, LoadSceneMode.Single);
         }
     }
 }
