@@ -31,15 +31,9 @@ public class MouseDrag : MonoBehaviour
         return Camera.main.ScreenToWorldPoint(mouseScreenPos);
     }*/
 
-    private void OnMouseDrag()
+    /*void Update()
     {
-        float xAxisRotation = Input.GetAxis("Mouse X") * rotationSpeed;
-        float yAxisRotation = Input.GetAxis("Mouse Y") * rotationSpeed;
-
-        transform.Rotate(Vector3.down, xAxisRotation);
-        transform.Rotate(Vector3.right, yAxisRotation);
-
-        /*if (rotate == false)
+        if (rotate == false)
             return;
 
         // When one capsule is rotating, it becomes the parent of the other capsule. The non-moving capsule becomes the child of the moving capsule
@@ -56,6 +50,18 @@ public class MouseDrag : MonoBehaviour
         else
         {
             otherPart.parent = null;
-        }*/
+        }
+    }*/
+
+    private void OnMouseDrag()
+    {
+        float xAxisRotation = Input.GetAxis("Mouse X") * rotationSpeed;
+        float yAxisRotation = Input.GetAxis("Mouse Y") * rotationSpeed;
+
+        transform.Rotate(Vector3.down, xAxisRotation);
+        transform.Rotate(Vector3.right, yAxisRotation);
+
+        //transform.RotateAround(rotationPoint.position, Vector3.forward, Time.deltaTime * rotationSpeed);
+        //transform.RotateAround(rotationPoint2.position, Vector3.forward, Time.deltaTime * rotationSpeed);
     }
 }
