@@ -13,11 +13,19 @@ namespace Prototype3
         public float rotationSpeed = 30f;
 
         public bool rotate = false;
+        //public bool isRotating = false;
+
+
+        private float sceneWidth;
+        private Vector3 pressPoint;
+        private Quaternion startRotation;
 
         // Start is called before the first frame update
         void Start()
         {
             //transform.parent = otherPart;
+            //sceneWidth = Screen.width;
+            //isRotating = false;
         }
 
         // Update is called once per frame
@@ -41,6 +49,29 @@ namespace Prototype3
             {
                 otherPart.parent = null;
             }
+
+            /*if(isRotating == true)
+            {
+                otherPart.parent = transform;
+            }
+            else
+            {
+                isRotating = false;
+                otherPart.parent = null;
+            }*/
         }
+
+        /*private void OnMouseDown()
+        {
+            pressPoint = Input.mousePosition;
+            startRotation = transform.rotation;
+        }
+
+        private void OnMouseDrag()
+        {
+            float currentDistanceBetweenMousePositions = (Input.mousePosition - pressPoint).x;
+            transform.rotation = startRotation * Quaternion.Euler(Vector3.forward * (currentDistanceBetweenMousePositions / sceneWidth) * 360);
+            isRotating = true;
+        }*/
     }
 }

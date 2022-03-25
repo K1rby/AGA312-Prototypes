@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Prototype2
+namespace Prototype3
 {
     public class FollowPlayer : MonoBehaviour
     {
