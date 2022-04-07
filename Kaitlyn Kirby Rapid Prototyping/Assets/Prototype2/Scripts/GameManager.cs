@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 namespace Prototype2
 {
-    public class GameManager : MonoBehaviour
+    public class GameManager : Singleton<GameManager>
     {
         bool gameEnded = false;
         public float restartDelay = 1f;
