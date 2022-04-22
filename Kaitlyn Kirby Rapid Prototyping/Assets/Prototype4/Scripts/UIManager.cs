@@ -13,13 +13,11 @@ namespace Prototype4
 
         public PlayerMovement playerMovement;
         public MouseLook mouseLook;
-
-        public TMP_Text[] numberText;  //The text that is between the +'s. Will change when buttons are pressed
-        public int numberInput;
+        public TabInputField tabInputField;
 
         public void Update()
         {
-           //numberInput = numberText.ToString();
+
         }
 
         public void ShowQuestion()
@@ -27,6 +25,7 @@ namespace Prototype4
             questionUI.SetActive(true);
             playerMovement.enabled = false;
             mouseLook.enabled = false;
+            tabInputField.enabled = true;
         }
 
         public void CorrectAnswer()
@@ -34,11 +33,7 @@ namespace Prototype4
             questionUI.SetActive(false);
             playerMovement.enabled = true;
             mouseLook.enabled = true;
+            tabInputField.enabled = false;
         }
-
-        /*public void GenerateButton()
-        {
-            numberInput += 1;
-        }*/
     }
 }

@@ -15,8 +15,6 @@ public class TriggerDoorController : MonoBehaviour
     [SerializeField] private string doorClose = "DoorCloseAnim";
 
     public UIManager uiManager;
-    //public PlayerMovement playerMovement;
-    //public MouseLook mouseLook;
 
     // Start is called before the first frame update
     void Start()
@@ -37,8 +35,6 @@ public class TriggerDoorController : MonoBehaviour
             if (openTrigger)
             {
                 uiManager.ShowQuestion();
-                //playerMovement.enabled = false;
-                //mouseLook.enabled = false;
                 doorAnim.Play(doorOpen, 0, 0.0f);
                 gameObject.SetActive(false);
             }
