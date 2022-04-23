@@ -14,6 +14,7 @@ namespace Prototype4
         public PlayerMovement playerMovement;
         public MouseLook mouseLook;
         public TabInputField tabInputField;
+        public TriggerDoorController doorController;
 
         public void Update()
         {
@@ -30,10 +31,11 @@ namespace Prototype4
 
         public void CorrectAnswer()
         {
-            questionUI.SetActive(false);
-            playerMovement.enabled = true;
-            mouseLook.enabled = true;
-            tabInputField.enabled = false;
+                doorController.doorAnim.Play(doorController.doorOpen, 0, 0.0f);
+                questionUI.SetActive(false);
+                playerMovement.enabled = true;
+                mouseLook.enabled = true;
+                tabInputField.enabled = false;
         }
     }
 }

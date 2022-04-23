@@ -7,11 +7,11 @@ using Prototype4;
 
 public class TriggerDoorController : MonoBehaviour
 {
-    [SerializeField] private Animator doorAnim = null;
+    [SerializeField] public Animator doorAnim = null; //Was private
     [SerializeField] private bool openTrigger = false;
     [SerializeField] private bool closeTrigger = false;
 
-    [SerializeField] private string doorOpen = "DoorOpenAnim";
+    [SerializeField] public string doorOpen = "DoorOpenAnim"; //Was private
     [SerializeField] private string doorClose = "DoorCloseAnim";
 
     public UIManager uiManager;
@@ -40,9 +40,9 @@ public class TriggerDoorController : MonoBehaviour
             }
             else if (closeTrigger)
             {
-                uiManager.CorrectAnswer();
-                doorAnim.Play(doorClose, 0, 0.0f);
-                gameObject.SetActive(false);
+                    //uiManager.CorrectAnswer();
+                    doorAnim.Play(doorClose, 0, 0.0f);
+                    gameObject.SetActive(false);
             }
         }
     }
