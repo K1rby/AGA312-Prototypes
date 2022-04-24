@@ -31,11 +31,12 @@ namespace Prototype4
 
         public void CorrectAnswer()
         {
-                doorController.doorAnim.Play(doorController.doorOpen, 0, 0.0f);
-                questionUI.SetActive(false);
-                playerMovement.enabled = true;
-                mouseLook.enabled = true;
-                tabInputField.enabled = false;
+            doorController.doorAnim.Play(doorController.doorOpen, 0, 0.0f);
+            gameObject.SetActive(false);
+            questionUI.SetActive(false);
+            playerMovement.enabled = true;
+            mouseLook.enabled = true;
+            tabInputField.enabled = false;
         }
     }
 }

@@ -35,7 +35,7 @@ public class TriggerDoorController : MonoBehaviour
             if (openTrigger)
             {
                 uiManager.ShowQuestion();
-                doorAnim.Play(doorOpen, 0, 0.0f);
+                //doorAnim.Play(doorOpen, 0, 0.0f);
                 gameObject.SetActive(false);
             }
             else if (closeTrigger)

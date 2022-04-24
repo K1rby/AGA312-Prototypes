@@ -7,8 +7,8 @@ using TMPro;
 public class TabInputField : MonoBehaviour
 {
     public TMP_InputField answerInput1; //0
-    public TMP_InputField answerInput2; //1
-    public TMP_InputField answerInput3; //2
+    //public TMP_InputField answerInput2; //1
+    //public TMP_InputField answerInput3; //2
 
     public int inputSelected;
 
@@ -21,13 +21,13 @@ public class TabInputField : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Tab) && Input.GetKey(KeyCode.LeftShift))
+        /*if(Input.GetKeyDown(KeyCode.Tab) && Input.GetKey(KeyCode.LeftShift))
         {
             inputSelected--;
             if (inputSelected < 0) inputSelected = 2;
             SelectInputField();
         }
-        else if (Input.GetKeyDown(KeyCode.Tab))
+        else*/ if (Input.GetKeyDown(KeyCode.Tab))
         {
             inputSelected++;
             if (inputSelected < 2) inputSelected = 0;
@@ -41,16 +41,16 @@ public class TabInputField : MonoBehaviour
         {
             case 0: answerInput1.Select();
                 break;
-            case 1:
+            /*case 1:
                 answerInput2.Select();
                 break;
             case 2:
                 answerInput3.Select();
-                break;
+                break;*/
         }
     }
 
-    public void Answer1Selected() => inputSelected = 0;
-    public void Answer2Selected() => inputSelected = 1;
-    public void Answer3Selected() => inputSelected = 2;
+    //public void Answer1Selected() => inputSelected = 0;
+    //public void Answer2Selected() => inputSelected = 1;
+    //public void Answer3Selected() => inputSelected = 2;
 }
