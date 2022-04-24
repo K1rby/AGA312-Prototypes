@@ -22,7 +22,7 @@ namespace Prototype2
 
         private void OnCollisionEnter(Collision collision)
         {
-            if(GetComponent<Collider>().tag == "Obstacle")
+            if(/*collision.*/GetComponent<Collider>().tag == "Obstacle")
             {
                 playerMovement.enabled = false;
                 FindObjectOfType<GameManager>().GameOver();

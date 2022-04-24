@@ -50,7 +50,7 @@ public class TabInputField : MonoBehaviour
         }
     }
 
-    //public void Answer1Selected() => inputSelected = 0;
+    public void Answer1Selected() => inputSelected = 0;
     //public void Answer2Selected() => inputSelected = 1;
     //public void Answer3Selected() => inputSelected = 2;
 }
