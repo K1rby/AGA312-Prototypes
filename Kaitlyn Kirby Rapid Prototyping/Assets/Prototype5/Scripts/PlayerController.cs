@@ -82,10 +82,10 @@ namespace Prototype5
         public IEnumerator ScaleHole()
         {
             Vector3 StartScale = transform.localScale;
-            Vector3 EndScale = StartScale * 2;
+            Vector3 EndScale = StartScale * 4;
 
             float t = 0;
-            while (t <= 0.4f)
+            while (t <= 0.05f)
             {
                 t += Time.deltaTime;
                 transform.localScale = Vector3.Lerp(StartScale, EndScale, t);
