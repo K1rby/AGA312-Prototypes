@@ -1,17 +1,30 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DanielDangToolkit;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 namespace Prototype5
 {
-    public class GameManager : JMC
+    public class GameManager : Singleton<GameManager>
     {
-        public int score;
-        public int lives;
+        public GameObject levelCompleteUI;
 
-        public void GameOver()
+        public void LevelComplete()
         {
-            //Execute game over logic
+            levelCompleteUI.SetActive(true);
+        }
+
+        public void ReloadLevel()
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 0);
+        }
+
+        public void QuitGame()
+        {
+            Debug.Log("Quit");
+            Application.Quit();
         }
     }
 }
